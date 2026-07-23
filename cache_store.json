@@ -2,9 +2,28 @@
   {
     "query": "what is the capital of france",
     "response": {
-      "answer": "The capital of France is Paris. This information is widely known and does not require a web search.",
+      "answer": "The capital of France is Paris. This is a well-known fact and does not require a web search.",
       "iterations": 1,
       "tool_calls": [],
+      "provider": "groq",
+      "from_cache": false
+    }
+  },
+  {
+    "query": "what is the current population of dubai",
+    "response": {
+      "answer": "The current population of Dubai is approximately 3.79 million people, according to the sources listed below:\n\n1. World Population Review - https://worldpopulationreview.com/cities/united-arab-emirates/dubai\n2. MacroTrends - https://www.macrotrends.net/global-metrics/cities/22635/dubai/population\n3. The Official Platform of the UAE Government - https://u.ae/en/about-the-uae/the-seven-emirates/dubai\n4. Global Media Insight - https://www.globalmediainsight.com/blog/dubai-population-statistics\n5. Worldometers - https://www.worldometers.info/world-population/united-arab-emirates-population\n\nPlease note that the population figures may vary slightly depending on the source and date, but 3.79 million is a commonly cited estimate.",
+      "iterations": 2,
+      "tool_calls": [
+        {
+          "tool": "search_web",
+          "input": {
+            "max_results": 5,
+            "query": "current population of Dubai"
+          }
+        }
+      ],
+      "provider": "groq",
       "from_cache": false
     }
   }

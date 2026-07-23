@@ -1,6 +1,6 @@
 import sys
 from app.config import settings
-from app.agent import Agent
+from app.runner import run_task
 
 
 def main():
@@ -11,15 +11,16 @@ def main():
     settings.validate()
 
     task = " ".join(sys.argv[1:])
-    agent = Agent()
-
     print(f"Task: {task}\n")
-    result = agent.run(task)
+
+    result = run_task(task)
 
     print(f"Answer:\n{result['answer']}\n")
     print(f"Completed in {result['iterations']} iteration(s), "
           f"{len(result['tool_calls'])} tool call(s) made.")
     print(f"Served from cache: {result['from_cache']}")
+    if not result["from_cache"]:
+        print(f"Provider used: {result.get('provider', 'unknown')}")
 
 
 if __name__ == "__main__":

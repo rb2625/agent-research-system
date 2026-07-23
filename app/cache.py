@@ -4,7 +4,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 CACHE_FILE = os.path.join(os.path.dirname(__file__), "..", "cache_store.json")
-SIMILARITY_THRESHOLD = 0.45
+SIMILARITY_THRESHOLD = 0.65
 
 
 class SemanticCache:
@@ -28,7 +28,7 @@ class SemanticCache:
             return None
 
         queries = [entry["query"] for entry in self.entries] + [query]
-        vectorizer = TfidfVectorizer().fit(queries)
+        vectorizer = TfidfVectorizer(stop_words="english").fit(queries)
         vectors = vectorizer.transform(queries)
 
         similarities = cosine_similarity(vectors[-1], vectors[:-1])[0]

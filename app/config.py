@@ -7,8 +7,10 @@ load_dotenv()
 class Settings:
     def __init__(self):
         self.groq_api_key = os.getenv("GROQ_API_KEY", "")
+        self.gemini_api_key = os.getenv("GEMINI_API_KEY", "")
         self.tavily_api_key = os.getenv("TAVILY_API_KEY", "")
         self.model = os.getenv("AGENT_MODEL", "llama-3.3-70b-versatile")
+        self.gemini_model = os.getenv("GEMINI_MODEL", "gemini-flash-latest")
         self.max_iterations = int(os.getenv("AGENT_MAX_ITERATIONS", "8"))
 
     def validate(self):
