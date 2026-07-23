@@ -2,6 +2,7 @@ import json
 from groq import Groq
 from .config import settings
 from .tools import TOOL_SPECS, TOOL_FUNCTIONS
+from .cache import SemanticCache
 
 DEFAULT_SYSTEM_PROMPT = (
     "You are a research assistant. Use the search_web tool to gather current, "
@@ -9,6 +10,8 @@ DEFAULT_SYSTEM_PROMPT = (
     "referencing their URLs. If the question can be answered without a search, "
     "you may answer directly."
 )
+
+_cache = SemanticCache()
 
 
 class Agent:
@@ -19,6 +22,18 @@ class Agent:
         self.system_prompt = system_prompt or DEFAULT_SYSTEM_PROMPT
 
     def run(self, task: str) -> dict:
+        cached = _cache.get(task)
+        if cached is not None:
+            result = dict(cached)
+            result["from_cache"] = True
+            return result
+
+        result = self._run_uncached(task)
+        result["from_cache"] = False
+        _cache.set(task, result)
+        return result
+
+    def _run_uncached(self, task: str) -> dict:
         messages = [
             {"role": "system", "content": self.system_prompt},
             {"role": "user", "content": task},

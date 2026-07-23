@@ -1,0 +1,11 @@
+[
+  {
+    "query": "what is the capital of france",
+    "response": {
+      "answer": "The capital of France is Paris. This information is widely known and does not require a web search.",
+      "iterations": 1,
+      "tool_calls": [],
+      "from_cache": false
+    }
+  }
+]

@@ -19,6 +19,7 @@ def main():
     print(f"Answer:\n{result['answer']}\n")
     print(f"Completed in {result['iterations']} iteration(s), "
           f"{len(result['tool_calls'])} tool call(s) made.")
+    print(f"Served from cache: {result['from_cache']}")
 
 
 if __name__ == "__main__":
