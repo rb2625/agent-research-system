@@ -3,7 +3,7 @@ from groq import Groq
 from .config import settings
 from .tools import TOOL_SPECS, TOOL_FUNCTIONS
 
-SYSTEM_PROMPT = (
+DEFAULT_SYSTEM_PROMPT = (
     "You are a research assistant. Use the search_web tool to gather current, "
     "accurate information before answering. Cite the sources you used by "
     "referencing their URLs. If the question can be answered without a search, "
@@ -12,14 +12,15 @@ SYSTEM_PROMPT = (
 
 
 class Agent:
-    def __init__(self, model: str = None, max_iterations: int = None):
+    def __init__(self, model: str = None, max_iterations: int = None, system_prompt: str = None):
         self.client = Groq(api_key=settings.groq_api_key)
         self.model = model or settings.model
         self.max_iterations = max_iterations or settings.max_iterations
+        self.system_prompt = system_prompt or DEFAULT_SYSTEM_PROMPT
 
     def run(self, task: str) -> dict:
         messages = [
-            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "system", "content": self.system_prompt},
             {"role": "user", "content": task},
         ]
         tool_calls_made = []
