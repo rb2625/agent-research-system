@@ -1,29 +1,42 @@
 [
   {
-    "query": "what is the capital of france",
+    "query": "what is the newest smartphone released this year",
     "response": {
-      "answer": "The capital of France is Paris. This is a well-known fact and does not require a web search.",
-      "iterations": 1,
-      "tool_calls": [],
-      "provider": "groq",
-      "from_cache": false
-    }
-  },
-  {
-    "query": "what is the current population of dubai",
-    "response": {
-      "answer": "The current population of Dubai is approximately 3.79 million people, according to the sources listed below:\n\n1. World Population Review - https://worldpopulationreview.com/cities/united-arab-emirates/dubai\n2. MacroTrends - https://www.macrotrends.net/global-metrics/cities/22635/dubai/population\n3. The Official Platform of the UAE Government - https://u.ae/en/about-the-uae/the-seven-emirates/dubai\n4. Global Media Insight - https://www.globalmediainsight.com/blog/dubai-population-statistics\n5. Worldometers - https://www.worldometers.info/world-population/united-arab-emirates-population\n\nPlease note that the population figures may vary slightly depending on the source and date, but 3.79 million is a commonly cited estimate.",
-      "iterations": 2,
+      "answer": "Several major smartphone manufacturers have released new models in early 2026. Here are the latest smartphone releases:\n\n---\n\n### **1. Samsung Galaxy S26 Series (S26, S26+, S26 Ultra)**\n* **Release Date:** Announced February 25, 2026; released March 2026 [(news.samsung.com)](https://news.samsung.com/global/galaxy-unpacked-2026-a-first-look-at-the-galaxy-s26-series-samsungs-most-intuitive-ai-phone-yet)\n* **Highlights:** \n  * Samsung\u2019s newest flagship line featuring deeper **Galaxy AI** integration.\n  * Powered by the latest Snapdragon 8 / Exynos chipsets.\n  * **S26 Ultra** includes refined quad-camera hardware with improved Nightography, an integrated S Pen, and enhanced display brightness/durability [(samsung.com)](https://www.samsung.com/sg/mobile/mobile-phone-buying-guide/introducing-the-new-samsung-galaxy-s26).\n\n---\n\n### **2. Apple iPhone 17e**\n* **Release Date:** March 2026 [(macworld.com)](https://www.macworld.com/article/2881175/iphone-17e-release-date-specs-features-price.html)\n* **Highlights:** \n  * Apple\u2019s updated entry-level iPhone starting at $599.\n  * Powered by the **A19 chip** and Apple\u2019s custom C1X cellular modem [(macworld.com)](https://www.macworld.com/article/2881175/iphone-17e-release-date-specs-features-price.html).\n  * Now starts with double the base storage (256GB) and includes MagSafe wireless charging support [(macworld.com)](https://www.macworld.com/article/2881175/iphone-17e-release-date-specs-features-price.html).\n\n---\n\n### **3. Xiaomi 17 Ultra**\n* **Release Date:** Early 2026 [(gsmarena.com)](https://www.gsmarena.com/smartphone_buyers_guide-review-2036.php)\n* **Highlights:** \n  * Premium cameraphone flagship developed in partnership with Leica [(gsmarena.com)](https://www.gsmarena.com/smartphone_buyers_guide-review-2036.php).\n  * Features high-speed charging, long battery life, and top-tier silicon [(gsmarena.com)](https://www.gsmarena.com/smartphone_buyers_guide-review-2036.php).\n\n---\n\n### **4. Google Pixel 10a**\n* **Release Date:** Early 2026 [(pcmag.com)](https://www.pcmag.com/picks/the-best-phones)\n* **Highlights:** \n  * Google\u2019s budget-friendly A-series update offering Pixel camera processing, clean UI, and long-term software update support [(pcmag.com)](https://www.pcmag.com/picks/the-best-phones).\n\n---\n\n### **5. Motorola Razr & Moto G Series (2026)**\n* **Release Date:** Early 2026 [(pcmag.com)](https://www.pcmag.com/picks/the-best-phones)\n* **Highlights:** \n  * **Razr (2026):** Accessible clamshell foldable featuring integrated AI smarts and improved battery life [(pcmag.com)](https://www.pcmag.com/picks/the-best-phones).\n  * **Moto G / Moto G Play (2026):** Budget-oriented 5G handsets.\n\n---\n\n### **Summary Recommendation:**\n* **Best Flagship (Android):** Samsung Galaxy S26 Ultra [(pcmag.com)](https://www.pcmag.com/picks/the-best-phones)\n* **Best Value (iOS):** Apple iPhone 17e [(macworld.com)](https://www.macworld.com/article/2881175/iphone-17e-release-date-specs-features-price.html)\n* **Best Value (Android):** Google Pixel 10a [(pcmag.com)](https://www.pcmag.com/picks/the-best-phones)",
+      "iterations": 6,
       "tool_calls": [
         {
           "tool": "search_web",
           "input": {
-            "max_results": 5,
-            "query": "current population of Dubai"
+            "query": "newest smartphone released 2026"
+          }
+        },
+        {
+          "tool": "search_web",
+          "input": {
+            "query": "new smartphone release february march 2026"
+          }
+        },
+        {
+          "tool": "search_web",
+          "input": {
+            "query": "\"Samsung Galaxy S26\" release date 2026"
+          }
+        },
+        {
+          "tool": "search_web",
+          "input": {
+            "query": "smartphone releases March 2026"
+          }
+        },
+        {
+          "tool": "search_web",
+          "input": {
+            "query": "iPhone 17e release date 2026"
           }
         }
       ],
-      "provider": "groq",
+      "provider": "gemini",
       "from_cache": false
     }
   }

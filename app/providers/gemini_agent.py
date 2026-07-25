@@ -83,7 +83,7 @@ class GeminiAgent:
                     )
                 )
 
-            contents.append(types.Content(role="tool", parts=response_parts))
+            contents.append(types.Content(role="user", parts=response_parts))
 
         return {
             "answer": "Reached the maximum number of iterations without a final answer.",
