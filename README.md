@@ -1,5 +1,11 @@
 # Agent Research System
 
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Python](https://img.shields.io/badge/python-3.10+-blue)
+![Next.js](https://img.shields.io/badge/next.js-14-black)
+
+An autonomous multi-agent research system...
+
 An autonomous multi-agent research system. Give it a topic, and a team of AI agents plans it, researches it in parallel, and writes a cited report — backed by a reliability layer that keeps it working even when a provider rate-limits or fails.
 
 ## How it works
