@@ -113,10 +113,10 @@ backend/
 
 ## Roadmap
 
-✅ Single agent with web search tool
-✅ Multi-agent orchestration (planner, parallel researchers, writer)
-✅ Semantic caching, multi-provider fallback, rate limiting
-✅ Live progress tracking API
-✅ Next.js frontend with live status and rendered reports
-⬜ Docker packaging for one-command setup
-⬜ Persistent job storage
+- ✅ Single agent with web search tool
+- ✅ Multi-agent orchestration (planner, parallel researchers, writer)
+- ✅ Semantic caching, multi-provider fallback, rate limiting
+- ✅ Live progress tracking API
+- ✅ Next.js frontend with live status and rendered reports
+- ⬜ Docker packaging for one-command setup
+- ⬜ Persistent job storage
