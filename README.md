@@ -6,6 +6,8 @@
 
 An autonomous multi-agent research system. Give it a topic, and a team of AI agents plans it, researches it in parallel, and writes a cited report backed by a reliability layer that keeps it working even when a provider rate-limits or fails.
 
+https://agent-research-system.vercel.app/
+
 ## How it works
 
 1. **Planner agent** breaks a topic into 2-3 focused subtasks
