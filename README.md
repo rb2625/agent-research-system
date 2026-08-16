@@ -38,7 +38,7 @@ Every agent call passes through a caching + rate-limiting + fallback layer befor
 
 ## Setup
 
-Requirements: Python 3.10+, Node.js 18+, and three free API keys (no credit card required for any of them):
+Requirements: Python 3.10+, Node.js 18+, and three free API keys:
 
 - [Groq](https://console.groq.com) primary model
 - [Google AI Studio](https://aistudio.google.com/apikey) fallback model
